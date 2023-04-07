@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import axios from 'axios';
+import moment from 'moment';
 
 export default function App() {
   const [data, setData] = useState({})
@@ -28,6 +29,7 @@ export default function App() {
   return (
     <div className='app'>
       <div className='search'>
+      <p className="day">{moment().format('dddd')} {moment().format('LL')}</p>
         <input
           value={location}
           onChange={event => setLocation(event.target.value)}
@@ -38,8 +40,8 @@ export default function App() {
       </div>
       <div className='container'>
         <div className='top'>
-          <div className='location'>
-            <p>{data.name}</p>
+          <div className='location d-flex justify-content-between'>
+            <p id='citta'>{data.name}</p>
           </div>
           <div className=''>
             {data.main ? <h1>{(Math.floor(data.main.temp -273.15))} C°</h1> : null}
@@ -61,7 +63,6 @@ export default function App() {
           <div className='wind'>
             {data.wind ? <p className='bold'>{data.wind.speed} MPH</p> : null}
             <p>Wind Speed</p>
-
           </div>
         </div>
         }

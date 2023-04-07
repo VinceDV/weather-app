@@ -21,6 +21,13 @@ p {
 h1 {
   font-size: 6rem;
 }
+#citta {
+  font-size: 3em;
+}
+.day {
+  font-size: 1.2em;
+  position: absolute;
+}
 .location {
   font-family: bold;
 font-weight: 500;}
