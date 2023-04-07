@@ -38,7 +38,10 @@ font-weight: 500;}
   background-color: rgba(0,0,0,0.4);
   color: #fff;
 }
-
+input {
+  position: relative;
+  top: 2em;
+}
 .app:before {
   content: '';
   background: url('./assets/sunset.jpg') no-repeat center center/cover;
@@ -106,4 +109,3 @@ font-weight: 500;}
 .bold {
   font-weight: 700;
 }
-
