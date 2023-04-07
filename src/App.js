@@ -5,8 +5,8 @@ import axios from 'axios';
 export default function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
-
-  const API_CALL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=61c207cc1a3eb85ada6873dd4f84ef96`
+  
+    const API_CALL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=61c207cc1a3eb85ada6873dd4f84ef96`
 
   const searchLocation = () => {
 
@@ -15,8 +15,6 @@ export default function App() {
       console.log(response.data)
     })
     setLocation('')
-
-
   }
 
   const handleKeyDown = (event) => {
